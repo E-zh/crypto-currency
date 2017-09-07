@@ -60,14 +60,9 @@ class BitfinexService implements CryptoCurrencyContract
      */
     private function getCallData($url, $type)
     {
-        $proxy = 'http://10.100.123.1:8078';    //This proxy need me for testing at work!
-
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, config('crypto-currency.bitfinex.api-url') . $url . $type);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-        curl_setopt($ch, CURLOPT_PROXY, $proxy);    //This proxy need me for testing at work!
-
         $result = curl_exec($ch);
         curl_close($ch);
 
