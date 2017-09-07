@@ -1,0 +1,29 @@
+{
+    "name": "e-zh/crypto-currency",
+    "description": "Interaction with stock exchanges is a crypto currency",
+    "type": "package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Egor Zhelobanov",
+            "email": "e.zhelobanov@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Ezh\\CryptoCurrency\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev-master"
+        },
+        "laravel": {
+            "providers": [
+                "Ezh\\CryptoCurrency\\CryptoCurrencyServiceProvider"
+            ]
+        }
+    }
+}
